@@ -1,0 +1,129 @@
+* {
+  /* content + padding + border = width + height */
+  box-sizing: border-box;
+
+  margin: 0;
+  padding: 0;
+}
+
+div { border: 1px solid black;}
+
+/* 세로 5:5 분할 */
+.container-1 {
+  width: 500px;
+  height: 600px;
+  margin: 20px;
+}
+
+.container-1 > div {
+  width: 100%; /* 부모 너비와 동일 */
+  height: 50%; /* 부모 너비의 절반 */
+}
+
+.container-1 > div:first-child {
+  background-color: lightgreen;
+}
+
+.container-1 > div:last-child {
+  background-color: lightpink;
+}
+
+/* 세로 방향 3분할 */
+.container-2 {
+  width: 300px;
+  height: 432px;
+  margin: 20px;
+}
+
+/*
+  .containver-2 > div {
+  width: 100%;
+}
+  */
+
+.container-2 > div:first-of-type {
+  height: 50%;
+  background-color: #667BC6;
+}
+
+.container-2 > div:nth-of-type(2) {
+  height: 30%;
+  background-color: #FFB4C2;
+}
+
+.container-2 > div:last-of-type {
+  height: 20%;
+  background-color: #BBE9FF;
+}
+
+/* 가로 5:5 분할 */
+.container-3 {
+  width: 300px;
+  height: 100px;
+  margin: 20px;
+
+  display: flex;
+  flex-direction: row;
+}
+
+.container-3 > div {
+  width: 50%;
+  height: 100%;
+}
+
+/* 가로 5분할 */
+.container-4 {
+  width: 600px;
+  height: 100px;
+  margin: 20px;
+
+  display: flex;
+
+  /* flex 중심축 기본값 : row */
+  flex-direction: row;
+
+  /*
+    flex 교차축 정렬 기본값 : stretch
+    -> 교차축 방향(세로)으로 item이 쭉 당겨짐 == height : 100%
+  */
+  align-items: stretch;
+}
+
+.container-4 > div:nth-of-type(2n) {
+  width: 35%;
+}
+
+.container-4 > div:nth-of-type(2n-1) {
+  width: 10%;
+}
+
+
+/* 田 만들기 - 방법 1 */
+.container-5 {
+  width: 300px;
+  height: 300px;
+  margin: 20px;
+}
+
+/* 부모 높이 50% 짜리 행 */
+.row-50 {
+  height: 50%;
+  width: 100%;
+
+  display:flex;
+}
+
+/* 부모 너비 50% 짜리 열 */
+.col-50 {
+  width: 50%;
+  height: 100%;
+}
+
+/* 田 만들기 - 방법 2 */
+.flex { display: flex; }
+.wrap { flex-wrap: wrap; }
+
+.window {
+  width: 50%;
+  height: 50%;
+}
