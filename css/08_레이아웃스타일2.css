@@ -28,7 +28,7 @@
   width: 150px;
   height: 150px;
 
-  /* width/height 설정 값이 contecnt 영역에만 적용되게 설정 */
+  /* width/height 설정 값이 content 영역에만 적용되게 설정 */
   box-sizing: content-box;
 }
 
